@@ -11,10 +11,16 @@ int SecondDigit(int num)
     return num / 10 % 10;
 }
 
+bool IsThreeDigits(int numToCheck)      // Пригодится в задаче 13
+{
+    if (numToCheck > 100 && numToCheck < 999) return true;
+    return false;
+}
+
 System.Console.WriteLine("Введите трёхзначное число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 100 && number < 999)
+if (IsThreeDigits(number))
 {
     Console.WriteLine(SecondDigit(number));
 }
