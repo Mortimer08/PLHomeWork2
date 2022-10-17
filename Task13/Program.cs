@@ -7,13 +7,13 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-bool IsThreeDigits(int numToCheck)      // Пригодится в задаче 13
+bool IsThreeDigits(int numToCheck)
 {
     if (numToCheck > 100 && numToCheck < 999) return true;
     return false;
 }
 
-bool IsMoreThreeDigits(int num)      // Пригодится в задаче 13
+bool IsMoreThreeDigits(int num)
 {
     if (num > 100) return true;
     return false;
@@ -21,9 +21,11 @@ bool IsMoreThreeDigits(int num)      // Пригодится в задаче 13
 
 System.Console.WriteLine("Введите целое число");
 int number = Convert.ToInt32(Console.ReadLine());
-int currentNumber = number;
+
+
 if (IsMoreThreeDigits(number))
 {
+    int currentNumber = number;
     while (!IsThreeDigits(currentNumber))
     {
         currentNumber = currentNumber / 10;
