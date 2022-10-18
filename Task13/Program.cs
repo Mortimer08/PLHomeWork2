@@ -23,7 +23,7 @@ System.Console.WriteLine("Введите целое число");
 int number = Convert.ToInt32(Console.ReadLine());
 
 
-if (IsMoreThreeDigits(number))
+if (IsMoreThreeDigits(number))          // Замечание преподавателя - метод - избыточность
 {
     int currentNumber = number;
     while (!IsThreeDigits(currentNumber))
